@@ -72,7 +72,7 @@ def troubleshoot(router):
 
 @app.get("/", response_class=HTMLResponse)
 async def get_form(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("form.html", {"request": request})
 
 @app.post("/troubleshoot", response_class=HTMLResponse)
 async def troubleshoot_device(request: Request, ip_address: str = Form(...)):
