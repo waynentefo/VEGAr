@@ -1,0 +1,109 @@
+/* results.css */
+
+/* Base styles with color variables for theme switching */
+:root {
+    --bg-color-light: #f4f6f8;
+    --bg-color-dark: #2c2c2c;
+    --text-color-light: #333333;
+    --text-color-dark: #ffffff;
+    --accent-color: #4CAF50;
+    --result-bg-light: #ffffff;
+    --result-bg-dark: #3a3a3a;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 5px; /* Further reduced padding */
+    transition: background-color 0.3s, color 0.3s;
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+/* Theme switch button */
+.theme-switch {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 6px; /* Reduced padding */
+    border-radius: 50%;
+    font-size: 14px; /* Reduced font size */
+}
+
+/* Container for results */
+.container {
+    max-width: 100%; /* Full-width usage */
+    padding: 5px; /* Further reduced padding */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Result box styling */
+.result-box {
+    background-color: var(--result-bg-light);
+    border-radius: 12px; /* Slightly smaller border radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px; /* Reduced padding */
+    max-height: calc(100vh - 80px); /* Limit height for content */
+    overflow-y: hidden; /* Prevent vertical overflow */
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Reduced gap */
+}
+
+/* Individual result entry styling */
+.result-entry {
+    background-color: #f1f1f1;
+    padding: 8px; /* Reduced padding */
+    border-radius: 6px; /* Slightly smaller border radius */
+    margin-bottom: 6px; /* Reduced margin */
+    transition: background-color 0.3s;
+}
+
+/* Styling for output text */
+.output {
+    font-size: 12px; /* Further reduced font size */
+    color: var(--text-color-light);
+    white-space: pre-wrap; /* Maintain formatting */
+}
+
+/* Dark mode styles */
+body.dark {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark .result-box {
+    background-color: var(--result-bg-dark);
+}
+
+body.dark .output {
+    color: var(--text-color-dark);
+}
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    margin-top: 8px; /* Reduced margin */
+    padding: 6px 10px; /* Reduced padding */
+    font-size: 12px; /* Reduced font size */
+    color: #ffffff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}

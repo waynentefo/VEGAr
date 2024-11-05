@@ -1,0 +1,22 @@
+{
+    "name": "VEGA Network Troubleshooter",
+    "short_name": "VEGA",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f4f6f8",
+    "theme_color": "#1DA1F2",
+    "description": "Troubleshoot your network devices easily.",
+    "icons": [
+      {
+        "src": "/static/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/static/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
